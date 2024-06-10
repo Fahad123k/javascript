@@ -100,7 +100,43 @@ let marks={
 // }
 
 
-for(elem in marks){
-console.log(marks[elem]);
+// for(elem in marks){
+// console.log(marks[elem]);
+// }
+// module.export=test;
+
+
+
+const nums= [1,2,3,4,5,6,7, 12 ,47 ,6 ,88 ,38 ,4];
+
+
+// map function takes array and returned newa array
+
+const newArray=nums.map((num,index,arr)=>{
+    return (
+        num*3
+
+    );
+
+})
+
+const filteredArray= nums.filter((num,index)=>{
+    return num>2
+})
+
+
+
+function filterby(number,numarr,operator){
+    return numarr.filter((num,index)=>{
+        return operator(num,number)
+    })
 }
-module.export=test;
+
+
+const greaterThan = (a, b) => a > b;
+const lessThan = (a, b) => a < b;
+const equalTo = (a, b) => a === b;
+
+const numarr= [55,22,33,66,77,1,2,5,99,44,10,55,3,25,1];
+const res= filterby(20,numarr,lessThan)
+console.log(res);
