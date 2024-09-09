@@ -6,7 +6,7 @@ function dataTypes(){
 
 // let are block scope 
 // let can not be re declared
-// let and cosnt are lock scope while 
+// let and const are block scope while 
 // you can re declare var value and var is global scope you can access var value from any where in the script
 
 
@@ -52,7 +52,7 @@ This can lead to confusion and potential bugs if not managed carefully.
 /*in case of shadowing let with var  gives error because  
 when we declare var  by var keyword as you know var has global scope so it check entire script then gives error var .... is already declaed
 
-in case of let as you know it's a block scope when block exuceted its variable by  decalring by let whic h is also vanished*/
+in case of let as you know it's a block scope when block exuceted its variable by  decalring by let which is also vanished*/
 
 
 function test(){
@@ -136,6 +136,18 @@ var count="1";
 // let increm=4
 
 // Cannot access 'increm' before initialization because let var before assinging it goes to Temporal dead zone
+
+
+// classes are not hosted
+
+const instance = new MyClass();  // ReferenceError: Cannot access 'MyClass' before initialization
+class MyClass {
+    constructor() {
+        console.log("MyClass instance");
+    }
+}
+
+
 
 
 module.export =dataTypes;
