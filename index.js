@@ -185,8 +185,14 @@ function createIterators(array) {
 
 const myIterator= createIterators([1,2,3,4])
 
-console.log(myIterator.next().value);
-console.log(myIterator.next());
-console.log(myIterator.next());
-console.log(myIterator.next().value);
-console.log(myIterator.next().value);
+// console.log(myIterator.next().value);
+// console.log(myIterator.next());
+// console.log(myIterator.next());
+// console.log(myIterator.next().value);
+// console.log(myIterator.next().value);
+
+// undefined: Automatically assigned by JavaScript; represents a variable that has been declared but not yet initialized.
+// null: Explicitly assigned by the programmer; represents the intentional absence of value.
+const obj = { name: 'John' };
+console.log(String(obj));  // Output: "[object Object]"
+console.log(typeof(obj));
